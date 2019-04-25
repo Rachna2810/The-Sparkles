@@ -1,0 +1,23 @@
+import java.util.Scanner;
+interface Lambda
+{
+int Fibonacci(int a,int b);
+}
+public class Lambdas
+{
+public static void main(String[] args)
+{
+Lambda sum=(a,b)->(a+b);
+Scanner in = new Scanner(System.in);
+ int n = in.nextInt();
+ int x=0;
+ int y=1;
+ for(int i=0;i<=n;i++)
+ {
+int f=sum.Fibonacci(x,y);
+x=y;
+y=f;
+System.out.print(f+" ");
+}
+}
+}
